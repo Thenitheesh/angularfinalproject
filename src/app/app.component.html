@@ -1,13 +1,22 @@
-<mat-toolbar color="primary">
+<header>
   <nav>
-    <ul>
-      <li><button mat-raised-button color="primary"  routerLink="/">Home</button></li>
-      <li><button mat-raised-button color="primary"  routerLink="/book">book</button></li>
-      <!-- <li><button mat-raised-button color="primary"   routerLink="/movies/add">Add Book</button></li> -->
-      <!-- <li><button mat-raised-button  color="primary" routerLink="/movies">MaterialUi Movie</button></li> -->
-    </ul>
+    <mat-toolbar color="">
+        <div>
+          <img src="" alt="" />
+        </div>
+        <button mat-raised-button color="" routerLink="/">Home</button>
+
+        <button mat-raised-button color="" routerLink="/book">
+          book
+        </button>
+
+        <button mat-raised-button color="" routerLink="/newbook">
+          Add Book
+        </button>
+      </mat-toolbar>
   </nav>
-</mat-toolbar>
+</header>
+
 <div>
   <router-outlet></router-outlet>
 </div>

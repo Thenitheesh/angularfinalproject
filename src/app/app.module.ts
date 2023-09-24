@@ -12,8 +12,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgxStarRatingModule } from 'ngx-star-rating-latest';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AddbookComponent } from './addbook/addbook.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, BooksComponent, BookComponent],
+  declarations: [AppComponent, BooksComponent, BookComponent, AddbookComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,7 +27,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatToolbarModule,
     NgxStarRatingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
