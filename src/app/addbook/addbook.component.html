@@ -1,7 +1,6 @@
 <section class="maincontainer">
-    
     <form [formGroup]="bookForm" (ngSubmit)="addbook()" class="addbook">
-    <div class="smallcontainer">
+        <div class="smallcontainer">
         <!-- <div class="innercontainer"> -->
             <h1>Add New book</h1>
        
@@ -91,5 +90,5 @@
                         <app-profile *ngFor="let movi of moviesList; let i=index" [movie]="movi" [index]="i" (deleteMovie)="removeclr($event)"></app-profile>
                     </section> -->
                 </div>
-            </form>
+                </form>
 </section>

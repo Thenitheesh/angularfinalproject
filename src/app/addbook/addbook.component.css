@@ -4,12 +4,11 @@ div{
     background-color: white;
     border-radius: 10px;
 }
-
 .maincontainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background-color: aliceblue;
 }
 .example-full-width {

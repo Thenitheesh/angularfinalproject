@@ -18,10 +18,12 @@ export class BooksComponent {
 //   helo(){
 // this.bookservice.getbooks().subscribe()
 // }
+
 ngOnInit(){
 
   this.bookservice.getdata().subscribe(data => {
     this.books=data.results
+    
     console.log(this.books,"nith")
   // this.books=data.map((e:any)=>{
   //  return {name:e.results[0].series_name}

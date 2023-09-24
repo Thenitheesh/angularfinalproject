@@ -1,3 +1,84 @@
-<section>
-    <app-book *ngFor="let book of books" [book]="book"></app-book>
+<!-- <aside>
+  <div class="logo">Books</div>
+  <nav>
+    <ul>
+      <li class="subhead">DISCOVER</li>
+      <li>
+        <a class="nav scrolltoview current" href="#search"
+          ><span class="icon">🔍</span>Search</a
+        >
+      </li>
+      <li>
+        <a class="nav scrolltoview" href="#foryou"
+          ><span class="icon">💖</span>For you</a
+        >
+      </li>
+      <li class="subhead">LIBRARY</li>
+      <li>
+        <a class="nav scrolltoview" href="#fiction"
+          ><span class="icon">👽</span>Fiction</a
+        >
+      </li>
+      <li>
+        <a class="nav scrolltoview" href="#poetry"
+          ><span class="icon">🌈</span>Poetry</a
+        >
+      </li>
+      <li>
+        <a class="nav scrolltoview" href="#fantasy"
+          ><span class="icon">🌺</span>Fantasy</a
+        >
+      </li>
+      <li>
+        <a class="nav scrolltoview" href="#romance"
+          ><span class="icon">💕</span>Romance</a
+        >
+      </li>
+      <li class="nav trigger"><span class="icon">✨</span>More</li>
+    </ul>
+  </nav>
+  <div class="spacer"></div>
+  <label class="theme-switch" for="checkbox" title="Night mode">
+    <input type="checkbox" id="checkbox" aria-label="Night mode" />
+    <div class="slider round"></div>
+  </label>
+</aside> -->
+
+<section class="results">
+  <div class="list-book foryou">
+    <a class="category" href="#love">
+      <div class="book">
+        <div class="book-info">
+          <h1 class="section-title">Daily Top 100</h1>
+        </div>
+      </div>
+    </a>
+    <a class="category" href="#feminism">
+      <div class="book">
+        <div class="book-info">
+          <h1 class="section-title">New releases</h1>
+        </div>
+      </div>
+    </a>
+    <a class="category" href="#inspirational">
+      <div class="book">
+        <div class="book-info">
+          <h1 class="section-title">Bestsellers</h1>
+        </div>
+      </div>
+    </a>
+    <a class="category" href="#authors">
+      <div class="book">
+        <div class="book-info">
+          <h1 class="section-title">Top authors</h1>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="booky">
+      <app-book
+        *ngFor="let book of books"
+        [book]="book"
+      ></app-book>
+  </div>
 </section>
