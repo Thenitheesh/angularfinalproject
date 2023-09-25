@@ -46,28 +46,28 @@
 
 <section class="results">
   <div class="list-book foryou">
-    <a class="category" href="#love">
+    <a class="category" href="book/love">
       <div class="book">
         <div class="book-info">
           <h1 class="section-title">Daily Top 100</h1>
         </div>
       </div>
     </a>
-    <a class="category" href="#feminism">
+    <a class="category" href="book/feminism">
       <div class="book">
         <div class="book-info">
           <h1 class="section-title">New releases</h1>
         </div>
       </div>
     </a>
-    <a class="category" href="#inspirational">
+    <a class="category" href="book/inspirational">
       <div class="book">
         <div class="book-info">
           <h1 class="section-title">Bestsellers</h1>
         </div>
       </div>
     </a>
-    <a class="category" href="#authors">
+    <a class="category" href="book/authors">
       <div class="book">
         <div class="book-info">
           <h1 class="section-title">Top authors</h1>
@@ -76,7 +76,11 @@
     </a>
   </div>
   <div class="booky">
-      <app-book
+      <app-book  infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="500"
+      (scrolled)="onScroll()"
+   
         *ngFor="let book of books"
         [book]="book"
       ></app-book>

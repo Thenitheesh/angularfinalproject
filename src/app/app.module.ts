@@ -17,8 +17,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
+import { SearchbookComponent } from './searchbook/searchbook.component';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
 @NgModule({
-  declarations: [AppComponent, BooksComponent, BookComponent, AddbookComponent],
+  declarations: [AppComponent, BooksComponent, BookComponent, AddbookComponent, SearchComponent, SearchbookComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,7 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent],

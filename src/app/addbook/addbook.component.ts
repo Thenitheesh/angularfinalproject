@@ -26,5 +26,18 @@ export class AddbookComponent {
   ) {
     // this.moviesList = this.movieService.getmovie();
   }
-  addbook(){}
+  addbook(){
+
+      console.log(this.bookForm.value);
+      if (this.bookForm.valid) {
+        const newbook = this.bookForm.value;
+      
+        // this.movieService.setmovie(newMovie as Movie);
+        this.bookservice.setmoviefromapi(newbook ).subscribe(() => {
+          this.router.navigate(['/book']);
+        });
+        // programmatically change
+      
+    }
+  }
 }

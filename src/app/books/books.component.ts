@@ -15,20 +15,26 @@ export class BooksComponent {
 
   // }
   books:any[]=[]
+  newbooks:any[]=[]
+  currentpage=1
 //   helo(){
 // this.bookservice.getbooks().subscribe()
 // }
-
+page=1
 ngOnInit(){
 
-  this.bookservice.getdata().subscribe(data => {
-    this.books=data.results
-    
-    console.log(this.books,"nith")
-  // this.books=data.map((e:any)=>{
-  //  return {name:e.results[0].series_name}
-  // })  
-  
-  })
+  this.getdata(this.currentpage);
 }
+  getdata(page:number) {
+    this.bookservice.getdata(page).subscribe(data=> {
+      this.books = [...this.books,...data]
+console.log(this.books)
+    });
+  }
+
+  onScroll(){
+this.currentpage++
+// this.getdata(this.currentpage)
+}
+
 }
