@@ -20,8 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { SearchbookComponent } from './searchbook/searchbook.component';
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { BookdetailComponent } from './bookdetail/bookdetail.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
-  declarations: [AppComponent, BooksComponent, BookComponent, AddbookComponent, SearchComponent, SearchbookComponent],
+  declarations: [AppComponent, BooksComponent, BookComponent, AddbookComponent, SearchComponent, SearchbookComponent, BookdetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,7 +37,9 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    ReactiveFormsModule,InfiniteScrollModule
+    MatTooltipModule,
+    ReactiveFormsModule,InfiniteScrollModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

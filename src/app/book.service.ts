@@ -27,6 +27,11 @@ export class BookService {
       `https://64f6f4189d7754084952d867.mockapi.io/users/`,newbook
     );
   }
+  getbookfromapibyid(id:string){
+    return this.http.get(
+      `https://64f6f4189d7754084952d867.mockapi.io/users/${id}`
+    );
+  }
   // getmoviefromapi(){
   //   return this.http.get<Movie[]>(
   //     'https://64f6f4189d7754084952d867.mockapi.io/movies'

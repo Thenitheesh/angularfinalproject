@@ -20,21 +20,25 @@ export class BooksComponent {
 //   helo(){
 // this.bookservice.getbooks().subscribe()
 // }
-page=1
 ngOnInit(){
-
-  this.getdata(this.currentpage);
-}
-  getdata(page:number) {
-    this.bookservice.getdata(page).subscribe(data=> {
-      this.books = [...this.books,...data]
+    this.bookservice.getdata(this.currentpage).subscribe(data=> {
+      this.books = data
 console.log(this.books)
     });
+  }
+  isLoading=false
+  onLoadingChange(isLoading: boolean): void {
+    this.isLoading = isLoading;
   }
 
   onScroll(){
 this.currentpage++
-// this.getdata(this.currentpage)
+this.onLoadingChange(true)
+this.bookservice.getdata(this.currentpage).subscribe(data=> {
+  this.books.push(...data)
+// console.log(data)
+this.onLoadingChange(false)
+});
 }
 
 }

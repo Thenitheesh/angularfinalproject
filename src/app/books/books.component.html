@@ -44,7 +44,13 @@
   </label>
 </aside> -->
 
-<section class="results">
+<section
+  class="results"
+  infiniteScroll
+  [infiniteScrollDistance]="0.2"
+  [infiniteScrollThrottle]="200"
+  (scrolled)="onScroll()"
+>
   <div class="list-book foryou">
     <a class="category" href="book/love">
       <div class="book">
@@ -76,13 +82,7 @@
     </a>
   </div>
   <div class="booky">
-      <app-book  infiniteScroll
-      [infiniteScrollDistance]="2"
-      [infiniteScrollThrottle]="500"
-      (scrolled)="onScroll()"
-   
-        *ngFor="let book of books"
-        [book]="book"
-      ></app-book>
+    <app-book *ngFor="let book of books" class="booklist" [book]="book"></app-book>
+    <mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
   </div>
 </section>

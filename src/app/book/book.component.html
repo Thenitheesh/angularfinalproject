@@ -17,7 +17,7 @@
     <ngx-star-rating [id]="'rating'" [disabled]="false"></ngx-star-rating>
   </mat-card-actions>
 </mat-card> -->
-<div
+<div (click)="detailpage()"
   class="book"
   [style]="color"
 >
@@ -30,22 +30,21 @@
       alt="cover"
   /></a>
   <div class="book-info">
-    <h3 class="book-title">
+    <h3 class="book-title" matTooltip="{{book.title}}">
       <a
         href="https://google.com/${book.title}"
         target="_blank"
         >{{book.title }}</a
       >
     </h3>
-    <div class="book-authors" onclick='updateFilter(this,"author");'>
+    <div class="book-authors"  onclick='updateFilter(this,"author");'>
       {{book.authors}}
     </div>
     <div
       class="info"
-      onclick='updateFilter(this,"subject");'
-      style="background-color: #1ba34d40"
+
     >
-      Fiction
+      {{book.genre[0]}}
     </div>
   </div>
 </div>

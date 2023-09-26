@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { AppComponent,Book } from '../app.component';
 import { BookService } from '../book.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book',
@@ -12,6 +13,7 @@ export class BookComponent {
   @Input()  book:any={
     name:'hi'
   };
+  constructor(private route:Router){}
   clr=""
   getRandomColor = () =>{
    
@@ -21,5 +23,7 @@ export class BookComponent {
   }
 
   color=`background: linear-gradient(` +this.getRandomColor() +`, rgba(0, 0, 0, 0));`
-  
+  detailpage(){
+    this.route.navigate([`/book/${this.book.id}`])
+  }
 }
