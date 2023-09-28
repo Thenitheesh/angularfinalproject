@@ -32,33 +32,5 @@ export class BookService {
       `https://64f6f4189d7754084952d867.mockapi.io/users/${id}`
     );
   }
-  // getmoviefromapi(){
-  //   return this.http.get<Movie[]>(
-  //     'https://64f6f4189d7754084952d867.mockapi.io/movies'
-  //   );
-  // }
-  // getmoviefromapibyid(id:string){
-  //   return this.http.get<Movie>(
-  //     `https://64f6f4189d7754084952d867.mockapi.io/movies/${id}`
-  //   );
-  // }
-  // setmoviefromapi(newMovie:Movie){
-  //   return this.http.post(
-  //     `https://64f6f4189d7754084952d867.mockapi.io/movies/`,newMovie
-  //   );
-  // }
-  // setmovie(newMovie:Movie){
-  //   this.moviesList.push(newMovie)
-  // }
-  // updateMovie( i:number, j:number,newMovie:Movie){
-  //   this.moviesList.splice(i,j,newMovie)
-  // }
-  // updatemoviefromapi(id:string,editmovie:Movie){
-  //   return this.http.put(`https://64f6f4189d7754084952d867.mockapi.io/movies/${id}`,editmovie)
-  // }
   
-  // deletemoviefromapi(id:string){
-  //  return this.http.delete(`https://64f6f4189d7754084952d867.mockapi.io/movies/${id}`)
-    
-  // }
 }

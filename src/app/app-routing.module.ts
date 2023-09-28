@@ -7,10 +7,10 @@ import { SearchComponent } from './search/search.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 
 const routes: Routes = [
+  { path: 'book/details/:id', component: BookdetailComponent},
   { path: 'book', component: BooksComponent, pathMatch: 'full' },
   { path: 'book/:category', component: SearchComponent, pathMatch: 'full' },
   { path: 'newbook', component: AddbookComponent },
-  { path: 'book/details/:id', component: BookdetailComponent},
 ];
 
 @NgModule({

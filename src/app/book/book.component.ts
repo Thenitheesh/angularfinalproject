@@ -24,6 +24,6 @@ export class BookComponent {
 
   color=`background: linear-gradient(` +this.getRandomColor() +`, rgba(0, 0, 0, 0));`
   detailpage(){
-    this.route.navigate([`/book/${this.book.id}`])
+    this.route.navigate([`/book/details/${this.book.id}`])
   }
 }

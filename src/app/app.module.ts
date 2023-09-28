@@ -23,6 +23,7 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatDividerModule} from '@angular/material/divider';
 @NgModule({
   declarations: [AppComponent, BooksComponent, BookComponent, AddbookComponent, SearchComponent, SearchbookComponent, BookdetailComponent],
   imports: [
@@ -39,7 +40,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatInputModule,
     MatTooltipModule,
     ReactiveFormsModule,InfiniteScrollModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

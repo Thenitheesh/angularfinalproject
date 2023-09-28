@@ -11,13 +11,14 @@
       alt="cover"
   /></a>
   <div class="book-info">
-    <h3 class="book-title">
+    <h3 class="book-title">{{book.volumeInfo.title}}
       <a
         href="https://google.com/${book.title}"
         target="_blank"
         >{{book.title }}</a
       >
     </h3>
+    <h5>{{book.volumeInfo.authors}}</h5>
     <div class="book-authors" onclick='updateFilter(this,"author");'>
       {{book.authors}}
     </div>
