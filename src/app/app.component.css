@@ -17,6 +17,11 @@ header{
 
     flex-wrap: wrap;
   }
+  img{
+    height: 100%;
+    width:100%;
+    object-fit:cover
+  }
 section{
     display: flex;
     justify-content: center;

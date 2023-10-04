@@ -8,6 +8,7 @@ import { BookdetailComponent } from './bookdetail/bookdetail.component';
 
 const routes: Routes = [
   { path: 'book/details/:id', component: BookdetailComponent},
+  { path: '', component: BooksComponent, pathMatch: 'full' },
   { path: 'book', component: BooksComponent, pathMatch: 'full' },
   { path: 'book/:category', component: SearchComponent, pathMatch: 'full' },
   { path: 'newbook', component: AddbookComponent },
