@@ -66,6 +66,9 @@ MIT
 @angular/router
 MIT
 
+ngx-infinite-scroll
+MIT
+
 ngx-star-rating-latest
 MIT
 
